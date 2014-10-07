@@ -77,6 +77,7 @@ function rotateColorzWithCountDown() {
 		cntr++;
 	} else {
 		clearInterval(nIntervId);
+		window.location.assign("/faces")
 	}
 
 }
@@ -132,7 +133,7 @@ $( document ).ready(function() {
 </head>
 <body>
 <div id="containr">
-	<div id="title">The Microz</div>
+	<div id="title"><a href="/faces">The Microz</a></div>
 	<div id="colorz">
 		<div class="cbar" id="c1">
 		</div>
