@@ -18,6 +18,15 @@ app.get('/faces', function (req, res) {
 app.get('/fibber', function (req, res) {
   res.sendFile(__dirname + '/views/microz.html')
 })
+app.get('/flyers', function (req, res) {
+  res.sendFile(__dirname + '/views/flyers.html')
+})
+app.get('/hits', function (req, res) {
+  res.sendFile(__dirname + '/views/hits.html')
+})
+app.get('/nextgig', function (req, res) {
+  res.sendFile(__dirname + '/views/nextgig.html')
+})
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
