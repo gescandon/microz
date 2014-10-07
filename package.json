@@ -1,0 +1,33 @@
+{
+  "name": "microz.node",
+  "version": "0.0.0",
+  "description": "microz netwerk",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gescandon/microz.git"
+  },
+  "keywords": [
+    "microz",
+    "netwerk",
+    "1984"
+  ],
+  "author": "gescandon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gescandon/microz/issues"
+  },
+  "homepage": "https://github.com/gescandon/microz",
+  "dependencies": {
+    "express": "^4.9.5",
+    "logfmt": "^1.2.0"
+  }
+}
+{
+  "engines": {
+    "node": "0.10.x"
+  }
+}
