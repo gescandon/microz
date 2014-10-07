@@ -6,8 +6,16 @@ var app = express();
 app.set('views', './views')
 app.set('view engine', 'jade')
 app.use(logfmt.requestLogger());
+app.use('/public', express.static('public'));
+app.use('/bootstrap', express.static('bootstrap'));
 
 app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/views/faces.html')
+})
+app.get('/faces', function (req, res) {
+  res.sendFile(__dirname + '/views/faces.html')
+})
+app.get('/fibber', function (req, res) {
   res.sendFile(__dirname + '/views/microz.html')
 })
 
