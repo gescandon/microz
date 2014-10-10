@@ -12,6 +12,9 @@ app.use('/bootstrap', express.static('bootstrap'));
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/views/faces.html')
 })
+app.get('/booking', function (req, res) {
+  res.sendFile(__dirname + '/views/booking.html')
+})
 app.get('/faces', function (req, res) {
   res.sendFile(__dirname + '/views/faces.html')
 })
