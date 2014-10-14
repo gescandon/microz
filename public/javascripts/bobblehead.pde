@@ -17,21 +17,25 @@
     void setCindex() {
       cindex = Math.round(3*Math.random(1));
     }
- 
-   void setup() {
-     size(w,h);
-     frameRate(framerate);
-   }
- 
 
-   void draw() {
-    background(#000000);
-    var fibbox;
-    for (int i = 0; i < 3; i++) {
-      fibbox = new Fibbox(i*w/3,0,w/3,h);
-      fibbox.draw();
-     }      
-   }
+    // @pjs preload must be used to preload the image
+
+    /* @pjs preload="public/images/Brad-3x4-300-dpi.png"; */
+
+    PImage b;
+    PImage brad;
+
+    void setup() {
+      size(w,h);
+      brad = loadImage("public/images/Brad-3x4-300-dpi.png");
+      noLoop();
+    }
+
+
+
+    void draw() {
+      image(brad, w/2, 0, w/4, h);
+    }
  
    interface FibberBox {
      void draw();
