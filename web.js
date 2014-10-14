@@ -30,6 +30,9 @@ app.get('/hits', function (req, res) {
 app.get('/nextgig', function (req, res) {
   res.sendFile(__dirname + '/views/nextgig.html')
 })
+app.get('/p5', function (req, res) {
+  res.sendFile(__dirname + '/views/p5.html')
+})
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
