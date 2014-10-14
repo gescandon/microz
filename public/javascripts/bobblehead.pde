@@ -1,4 +1,4 @@
-    float framerate = 2; // our "sketch" will have a framerate of 24 frames per second.
+    float framerate = 30; // our "sketch" will have a framerate of 24 frames per second.
     int w = Math.round(0.9*screen.width);
     int h = 600;
     color[] colorz = new color[4];
@@ -9,6 +9,12 @@
     int cindex;
     int fibdex;
     int[] fibs = {1, 2, 3, 5, 8};
+
+    float angle;
+
+    float cosine;
+
+    float jitter;
 
     void setFibdex() {
       fibdex = fibs[Math.round(4*Math.random(1))];
@@ -27,41 +33,37 @@
 
     void setup() {
       size(w,h);
+      frameRate(framerate);
       brad = loadImage("public/images/Brad-3x4-300-dpi.png");
-      noLoop();
     }
 
 
 
     void draw() {
-      image(brad, w/2, 0, w/4, h);
+      background(#ffffff);
+
+      
+
+      if(second()%2 == 0){
+
+        jitter = (random(-0.1, 0.1));
+
+      }
+
+      angle = angle + jitter;
+
+      cosine = cos(angle);
+
+      
+
+      translate(width/2, height/2);
+      rect(0,0,10,10);
+      rotate(cosine);
+      translate(-brad.width/16, -brad.height/8);
+      image(brad, 0, 0, w/8, h/2);
     }
  
    interface FibberBox {
      void draw();
    }
 
-   class Fibbox implements FibberBox   {
-     int x,y,w,h;
-     int step=0;
- 
-     Fibbox(int x, int y, int w, int h) {
-     this.x = x;
-     this.y = y;
-     this.w = w;
-     this.h = h;
-     }
-  
-     void draw() {
-
-       setFibdex();
-       for (int i = 0; i < fibdex; i++) {
-        setCindex();
-        stroke(#000000);
-        fill(colorz[cindex]);
-        float fh = Math.round(w/fibdex);
-        rect(x + i * fh,y,fh,h);      
-       }
-       
-     }
-   }
