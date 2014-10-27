@@ -3,11 +3,15 @@ var nextGig = {
 	datetime:'Nov 1 @ 10pm'
 };
 
-var songs = ['Missing Persons - Destination Unknown',
-	'Devo - Whip It',
-	'Berlin - Metro',
-	'Frankie Goes to Hollywood - Relax',
-	'B-52s - Planet Claire'];
+var songs = ['Don\'t You Want Me - Human League',
+	'Whip It - Devo',
+	'Send Me an Angel - Real Life',
+	'Relax - Frankie Goes to Hollywood',
+	'Space Age Love Song - Flock of Seagulls',
+	'Once In a Lifetime - Talking Heads',
+	'Electic Avenue - Eddy Grant',
+	'Let\'s Dance - David Bowie',
+	'and more...'];
 
 var smarkup = '<h1><span class="label label-success">';
 var songsli = '';
