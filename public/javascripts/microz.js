@@ -18,3 +18,8 @@ var songsli = '';
       for (var i=0; i< songs.length; i++) {
         songsli += smarkup + songs[i] + '</span></h1>';
       }
+
+function gotoPage(pname){
+	window.location = pname;
+}
+
