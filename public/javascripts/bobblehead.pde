@@ -42,8 +42,6 @@
     void draw() {
       background(#ffffff);
 
-      
-
       if(second()%2 == 0){
 
         jitter = (random(-0.1, 0.1));

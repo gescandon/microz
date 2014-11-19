@@ -18,6 +18,9 @@ app.get('/bobble', function (req, res) {
 app.get('/booking', function (req, res) {
   res.sendFile(__dirname + '/views/booking.html')
 })
+app.get('/bouncer', function (req, res) {
+  res.sendFile(__dirname + '/views/bouncer.html')
+})
 app.get('/faces', function (req, res) {
   res.sendFile(__dirname + '/views/faces.html')
 })
@@ -35,6 +38,12 @@ app.get('/nextgig', function (req, res) {
 })
 app.get('/p5', function (req, res) {
   res.sendFile(__dirname + '/views/p5.html')
+})
+app.get('/simon', function (req, res) {
+  res.sendFile(__dirname + '/views/simon.html')
+})
+app.get('/sketchTalk', function (req, res) {
+  res.sendFile(__dirname + '/views/sketchTalk.html')
 })
 
 var port = Number(process.env.PORT || 5000);
