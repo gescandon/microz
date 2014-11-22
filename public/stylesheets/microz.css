@@ -1,12 +1,36 @@
+body {
+	background-color: #ffffff;
+	}
 img {
 	max-width: 100%
 	}
+/* unvisited link */
+a:link {
+    color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+    color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}
 #booking-header {
 	margin: 80px 0 0 0;
 	}
 #container {
-width:80%;
-margin:auto;
+	background-color: #ffffff;
+  	margin: auto;
+  	width: 95%;
+  	position: relative;
 }
 #header {
 margin: 0 0 20px 0;
@@ -43,3 +67,5 @@ font-weight: bold;
 .songlist {
 	text-align: center;
 }
+
+

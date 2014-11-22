@@ -4,18 +4,31 @@ Bouncer bouncer;
  
      // @pjs preload must be used to preload the image
 
+    /* @pjs preload="public/images/Mark-3x4-300-dpi.png"; */
     /* @pjs preload="public/images/Brad-3x4-300-dpi.png"; */
+    /* @pjs preload="public/images/KC-3x4-300-dpi.png"; */
+    /* @pjs preload="public/images/Geoff-3x4-300dpi.png"; */
 
     PImage b;
-    PImage brad;
-
-
+    PImage faceb;
+    PImage facem;
+    PImage facek;
+    PImage faceg;
+    PImage[] faces = new PImage[4]; 
+    faces[0] = faceb;
+    faces[1] = facem;
+    faces[2] = facek;
+    faces[3] = faceg;
+    
    void setup() {
      size(w,h);
      frameRate(24);
      stroke(#003300);
      fill(#0000FF);
-     brad = loadImage("public/images/Brad-3x4-300-dpi.png");
+     faceb = loadImage("public/images/brad.png");
+     facem = loadImage("public/images/mark.png");
+     facek = loadImage("public/images/kc.png");
+     faceg = loadImage("public/images/geof.png");
      bouncer = new Ball(width/2,20,20);
    }
  
@@ -37,12 +50,14 @@ Bouncer bouncer;
      float angle = 0.0;
      float cosine = 0.0;
      float jitter = 0.0;
+     PImage theface;
 
      Ball(int x, int y, int r) {
        this.x = x;
        this.y = y;
        this.y0 = y;
        this.radius = r;
+       this.theface = faceg;
      }
  
      void computeNextStep(int sketch_width, int sketch_height, float frame_rate) {
@@ -51,6 +66,25 @@ Bouncer bouncer;
        float bounce_height = sketch_height*0.8 * sin_value;
        float ball_height = sketch_height - (bounce_height + radius);
        y = (int) (ball_height);
+       if (ball_height > .8 * sketch_height) {
+          getNewFace();
+       }
+     }
+
+     void getNewFace() {
+      float x = random(4);
+      if (x < 4) {
+       theface = facek;
+      }
+      if (x < 3) {
+        theface = faceg;
+      }
+      if (x < 2) {
+        theface = facem;
+      }
+      if (x < 1) {
+        theface = faceb;
+      }
      }
 
      void computeRotation(){
@@ -72,6 +106,6 @@ Bouncer bouncer;
       
 
       int x0 =  (int)50 * jitter;
-      image(brad, w/3 + x0, y, w/2, h/2);
+      image(theface, w/3 + x0, y, w/2, h/2);
      }
    }

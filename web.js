@@ -39,6 +39,9 @@ app.get('/nextgig', function (req, res) {
 app.get('/p5', function (req, res) {
   res.sendFile(__dirname + '/views/p5.html')
 })
+app.get('/shock', function (req, res) {
+  res.sendFile(__dirname + '/views/shock.html')
+})
 app.get('/simon', function (req, res) {
   res.sendFile(__dirname + '/views/simon.html')
 })

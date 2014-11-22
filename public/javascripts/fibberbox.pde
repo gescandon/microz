@@ -1,4 +1,4 @@
-    float framerate = 2; // our "sketch" will have a framerate of 24 frames per second.
+    float framerate = 1; // our "sketch" will have a framerate of 24 frames per second.
     int w = Math.round(0.9*screen.width);
     int h = 600;
     color[] colorz = new color[4];

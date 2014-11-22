@@ -1,6 +1,6 @@
 var nextGig = {
 	place:'Blackbird Buvette',
-	datetime:'Nov 1 @ 10pm'
+	datetime:'Dec 6 @ 10pm'
 };
 
 var songs = ['Don\'t You Want Me - Human League',

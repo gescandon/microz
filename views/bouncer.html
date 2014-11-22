@@ -8,13 +8,7 @@
 	<script src="/public/javascripts/jquery.min.js"></script>
 	<script src="/public/javascripts/processing.min.js"></script>
 <style>
-  body {
-    background-color: #000000;    
-  }
   #containr {
-  	margin: auto;
-  	width: 95%;
-  	position: relative;
     background-color: #000000;
   }
   .cbar {
@@ -53,9 +47,11 @@
 </head>
 <body>
 <div id="containr">
-	<div id="title"><a href="/faces">The Microz</a></div>
+	<div id="title">
 	<canvas data-processing-sources="/public/javascripts/bouncer.pde"></canvas>
-	<div id="slogan">Dance like it's 1984.</div>
+  </div>
+	<div id="slogan">Dance like it's 1984.  <a href="/faces"><img style="height:50px;" src="/public/images/shocking.png"/></a>
+</div>
 </div>
 </body>
 </html>
