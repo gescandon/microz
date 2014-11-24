@@ -19,6 +19,19 @@ var songsli = '';
         songsli += smarkup + songs[i] + '</span></h1>';
       }
 
+var shocks = ['/shock','/bouncer','/fibber','/bobble'];
+var shockTime = 5000;
+var shockFadeIn = 3000;
+var shockOn = false;
+function setShock() {
+	if (shockOn) {
+	  $( "#containr" ).fadeOut( shockFadeIn, function(){
+		var ind = Math.round(Math.random() * (shocks.length-1));
+		window.location = shocks[ind];	  	
+	  } );
+	}
+}
+
 function gotoPage(pname){
 	window.location = pname;
 }

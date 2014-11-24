@@ -7,51 +7,20 @@
     <title>The Microz</title>
 	<script src="/public/javascripts/jquery.min.js"></script>
 	<script src="/public/javascripts/processing.min.js"></script>
-<style>
-  #containr {
-    background-color: #000000;
-  }
-  .cbar {
-  	width:24%;
-  	height: 400px;
-  	//border: solid 1px black;
-  	float: left;
-  	text-align: center;
-  }
-  .clearz {
-  	clear:both;
-  }
-  .slogan {
-  	display: block;
-  }
-  #colorz {
-	height:10px;
-	width:100%%;
-	display:block;
-	margin: auto;
-  }
-  #title {
-  	font-size: 48px;
-  	padding: 0 0 0 20px;
-  }
-  #slogan {
-  	font-size: 32px;
-  	text-align: right;
-  	padding: 10px 50px 0 0;
-    color: #0000ee;
-  }
-  #fibtoggle {
-  	font-weight: bold;
-  }
-</style>
+  <script src="/public/javascripts/microz.js"></script>
+  <link href="public/stylesheets/microz.css" rel="stylesheet">
 </head>
 <body>
 <div id="containr">
 	<div id="title">
 	<canvas data-processing-sources="/public/javascripts/bouncer.pde"></canvas>
   </div>
-	<div id="slogan">Dance like it's 1984.  <a href="/faces"><img style="height:50px;" src="/public/images/shocking.png"/></a>
+	<div class="slogan bl-pink">Dance like it's 1984.  <a href="/faces"><img style="height:50px;" src="/public/images/shocking.png"/></a>
 </div>
 </div>
 </body>
+<script type="text/javascript">
+  $( "#containr" ).hide().fadeIn( shockFadeIn );
+  window.setInterval(function () {setShock()}, shockTime);
+</script>
 </html>
