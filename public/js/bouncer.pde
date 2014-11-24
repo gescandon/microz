@@ -4,10 +4,10 @@ Bouncer bouncer;
  
      // @pjs preload must be used to preload the image
 
-    /* @pjs preload="public/images/Mark-3x4-300-dpi.png"; */
-    /* @pjs preload="public/images/Brad-3x4-300-dpi.png"; */
-    /* @pjs preload="public/images/KC-3x4-300-dpi.png"; */
-    /* @pjs preload="public/images/Geoff-3x4-300dpi.png"; */
+    /* @pjs preload="public/img/Mark-3x4-300-dpi.png"; */
+    /* @pjs preload="public/img/Brad-3x4-300-dpi.png"; */
+    /* @pjs preload="public/img/KC-3x4-300-dpi.png"; */
+    /* @pjs preload="public/img/Geoff-3x4-300dpi.png"; */
 
     PImage b;
     PImage faceb;
@@ -25,10 +25,10 @@ Bouncer bouncer;
      frameRate(24);
      stroke(#003300);
      fill(#0000FF);
-     faceb = loadImage("public/images/brad.png");
-     facem = loadImage("public/images/mark.png");
-     facek = loadImage("public/images/kc.png");
-     faceg = loadImage("public/images/geof.png");
+     faceb = loadImage("public/img/brad.png");
+     facem = loadImage("public/img/mark.png");
+     facek = loadImage("public/img/kc.png");
+     faceg = loadImage("public/img/geof.png");
      bouncer = new Ball(width/2,20,20);
    }
  

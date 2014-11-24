@@ -26,7 +26,7 @@
 
     // @pjs preload must be used to preload the image
 
-    /* @pjs preload="public/images/Brad-3x4-300-dpi.png"; */
+    /* @pjs preload="public/img/Brad-3x4-300-dpi.png"; */
 
     PImage b;
     PImage brad;
@@ -34,7 +34,7 @@
     void setup() {
       size(w,h);
       frameRate(framerate);
-      brad = loadImage("public/images/Brad-3x4-300-dpi.png");
+      brad = loadImage("public/img/Brad-3x4-300-dpi.png");
     }
 
 

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Microz</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/public/js/microz.js"></script>
+  <script src="/public/js/jquery.slabtext.min.js"></script>
+  <script src="/public/js/jquery-ui/jquery-ui.min.js"></script>
+  <link href="public/css/microz.css" rel="stylesheet">
+    <!-- slabtext stylesheet -->
+  <link href='http://fonts.googleapis.com/css?family=Monofett|Slackey|Press+Start+2P' rel='stylesheet' type='text/css'>
+  <link href="public/css/slabtext.css" rel="stylesheet" type="text/css" />
+  <link href="public/js/jquery-ui/jquery-ui.min.css"  rel="stylesheet" type="text/css" />
+    <!-- demo styles inline --> 
+    <style>
+        /* Note: I've not added the fontface files to the git repo */
+
+        hr 
+            {
+            border:0;
+            height:1px;
+            background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+            }
+        .col-1
+            {
+            width:47.5%;
+            margin:0 2.5% 0 0;
+            float:left;
+            }
+        .col-2
+            {
+            width:47.5%;
+            margin:0 0 0 2.5%;
+            float:left;
+            }
+        .col-1 p,
+        .col-2 p
+            {
+            color:#888;
+            font-size:80%;
+            text-align:center;
+            }
+        a
+            {
+            color:#111;
+            }
+        h1 a
+            {
+            text-decoration:none;
+            }
+        h1 a:hover
+            {
+            color:#a82222;
+            }
+        p
+            {
+            margin:0 0 1.5em 0;
+            line-height:1.5em;
+            }
+        dt
+            {
+            font-family:monospace;
+            }
+        pre
+            {
+            line-height:1.2;
+            }
+
+        /* Set font-sizes for the headings to be given the slabText treatment */
+        h1
+            {
+            text-align:left;
+            font-family:'Slackey', "Impact", Charcoal, Arial Black, Gadget, Sans serif;
+            text-transform: uppercase;
+            line-height:1;
+            color:#75e100;
+            font-size:300%;
+            /* Remember to set the correct font weight if using fontface */
+            font-weight:normal;
+            }
+
+        /* Adjust the line-height for all headlines that have been given the
+           slabtext treatment. Use a unitless line-height to stop sillyness */
+        .slabtexted h1
+            {
+            line-height:.9;
+            }
+        /* Target specific lines in the preset Studio One demo */
+        .slabtexted #studio-one span:nth-child(2)
+            {
+            line-height:.8;
+            }
+        .slabtexted #studio-one span:nth-child(3)
+            {
+            line-height:1.1;
+            }
+        /* Fun with media queries - resize your browser to view changes. */
+        @media screen and (max-width: 960px) 
+            {
+                body
+                    {
+                    padding:10px 0;
+                    min-width:20em;
+                    }
+                .col-1,
+                .col-2
+                    {
+                    float:none;
+                    margin:0;
+                    width:100%;
+                    }
+                h1
+                    {
+                    font-size:36px;
+                    }
+                h2
+                    {
+                    font-size:22px;
+                    }
+            }
+        @media screen and (max-width: 460px)
+            {
+                h1
+                    {
+                    font-size:26px;
+                    }
+                h2
+                    {
+                    font-size:18px;
+                    }
+            }
+    </style>
+    <!--[if lte IE 7]>
+    <style>
+    body
+        {
+        width:960px;
+        margin:0 auto;
+        }
+    </style>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <div id="containr">
+    <div id="lyric">
+    </div>
+  <hr />
+  </div>
+  <script>
+    // Function to slabtext the H1 headings
+    function slabTextHeadlines() {
+        var lyric = getLyric();
+        $("#lyric").html(lyric);
+        var clr = getColor();
+        $("h1").css('color', clr);
+        $( "#lyric" ).hide().fadeIn(3000).delay(15000).effect("drop",{direction:"down"},"slow");
+
+    };
+    
+    // Called one second after the onload event for the demo (as I'm hacking the
+    // fontface load event a bit here)
+
+    // Please do not do this in a production environment - you should really use
+    // google WebFont loader events (or something similar) for better control
+    $(window).load(function() {
+        // So, to recap... don't actually do this, it's nasty!
+        slabTextHeadlines();
+        window.setInterval(function () {setShock()}, shockTime);
+
+    });
+  </script>   
+</body>
+</html>
+</html>

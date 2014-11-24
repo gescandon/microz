@@ -3,8 +3,8 @@
      <head>
        <meta charset="utf-8">
        <title>My Processing Page</title>
-		<script src="/public/javascripts/jquery.min.js"></script>
-		<script src="/public/javascripts/processing.min.js"></script>
+		<script src="/public/js/jquery.min.js"></script>
+		<script src="/public/js/processing.min.js"></script>
 	       <script type="text/javascript">
        function drawSomeText(id) {
        	console.log(id);
@@ -15,7 +15,7 @@
        </script>
      </head>
      <body>
-       <canvas id="sketchTalk" data-processing-sources="/public/javascripts/sketchTalk.pde"></canvas>
+       <canvas id="sketchTalk" data-processing-sources="/public/js/sketchTalk.pde"></canvas>
        <input type="textfield" value="my text" id="inputtext">
        <button type="button" onclick="drawSomeText('sketchTalk')">place</button>
      </body>

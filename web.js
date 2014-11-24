@@ -45,6 +45,9 @@ app.get('/shock', function (req, res) {
 app.get('/simon', function (req, res) {
   res.sendFile(__dirname + '/views/simon.html')
 })
+app.get('/singer', function (req, res) {
+  res.sendFile(__dirname + '/views/singer.html')
+})
 app.get('/sketchTalk', function (req, res) {
   res.sendFile(__dirname + '/views/sketchTalk.html')
 })
