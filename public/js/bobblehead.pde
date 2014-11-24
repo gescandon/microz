@@ -1,6 +1,6 @@
-    float framerate = 30; // our "sketch" will have a framerate of 24 frames per second.
+    float framerate = 15; // our "sketch" will have a framerate of 24 frames per second.
     int w = Math.round(0.9*screen.width);
-    int h = 600;
+    int h = Math.round(0.85*screen.height);;
     color[] colorz = new color[4];
     colorz[0] = color(136, 225, 37); //#88E125;
     colorz[1] = color(252, 71, 140); //#fc478c;
@@ -26,7 +26,7 @@
 
     // @pjs preload must be used to preload the image
 
-    /* @pjs preload="public/img/Brad-3x4-300-dpi.png"; */
+    /* @pjs preload="public/img/shocking_pink.png"; */
 
     PImage b;
     PImage brad;
@@ -34,13 +34,14 @@
     void setup() {
       size(w,h);
       frameRate(framerate);
-      brad = loadImage("public/img/Brad-3x4-300-dpi.png");
+      background(#000000);
+      brad = loadImage("public/img/shocking_pink.png");
     }
 
 
 
     void draw() {
-      background(#ffffff);
+      background(#000000);
 
       if(second()%2 == 0){
 
@@ -54,11 +55,11 @@
 
       
 
-      translate(width/2, height/2);
-      rect(0,0,10,10);
+      translate(width/4, height/2);
+      //rect(0,0,10,10);
       rotate(cosine);
-      translate(-brad.width/16, -brad.height/8);
-      image(brad, 0, 0, w/8, h/2);
+      translate(-brad.width/8, -brad.height/8);
+      image(brad, 0, 0, w/2, h/2);
     }
  
    interface FibberBox {

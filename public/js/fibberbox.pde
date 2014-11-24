@@ -1,6 +1,6 @@
-    float framerate = 1; // our "sketch" will have a framerate of 24 frames per second.
+    float framerate0 = 0.3; // our "sketch" will have a framerate of 24 frames per second.
     int w = Math.round(0.85*screen.width);
-    int h = 600;
+    int h = screen.height - 50;
     color[] colorz = new color[4];
     colorz[0] = color(136, 225, 37); //#88E125;
     colorz[1] = color(252, 71, 140); //#fc478c;
@@ -20,7 +20,7 @@
  
    void setup() {
      size(w,h);
-     frameRate(framerate);
+    frameRate(framerate0);
     background(#000000);
    }
  
@@ -41,24 +41,31 @@
    class Fibbox implements FibberBox   {
      int x,y,w,h;
      int step=0;
- 
+     int fh;
+
      Fibbox(int x, int y, int w, int h) {
-     this.x = x;
-     this.y = y;
-     this.w = w;
-     this.h = h;
+       this.x = x;
+       this.y = y;
+       this.w = w;
+       this.h = h;
+       setFibdex();
+       fh = (int) Math.round(w/fibdex);
+       setCindex();
      }
   
      void draw() {
 
+       float s = second();
+       float r = s%3;
+       
        setFibdex();
        for (int i = 0; i < fibdex; i++) {
-        setCindex();
         stroke(#000000);
+            setCindex();
         fill(colorz[cindex]);
-        float fh = Math.round(w/fibdex);
+        fh = (int) Math.round(w/fibdex);
         rect(x + i * fh,y,fh,h);      
        }
-       
+      
      }
    }
