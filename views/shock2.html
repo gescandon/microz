@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Microz</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/public/js/processing.min.js"></script>
+  <script src="/public/js/microz.js"></script>
+  <link href="public/css/microz.css" rel="stylesheet">
+</head>
+<body>
+<div id="containr">
+  <div id="shockbox">
+    <canvas data-processing-sources="/public/js/shocker.pde"></canvas>
+    </div>
+	<div class="slogan bl-yel">Dance like it's 1984.</div>
+</div>
+</body>
+<script type="text/javascript">
+  $( "#containr" ).hide().fadeIn( shockFadeIn );
+  window.setInterval(function () {setShock()}, shockTime);
+</script>
+</html>

@@ -41,7 +41,7 @@ var songsli = '';
         songsli += smarkup + songs[i] + '</span></h1>';
       }
 
-var shocks = ['/shock','/bouncer','/fibber','/bobble','/singer'];
+var shocks = ['/shock','/bouncer','/fibber','/bobble','/singer','/shock2'];
 var shockTime = 23000;
 var shockFadeIn = 3000;
 var shockOn = true;
