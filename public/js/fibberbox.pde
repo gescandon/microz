@@ -1,11 +1,13 @@
     float framerate0 = 0.3; // our "sketch" will have a framerate of 24 frames per second.
     int w = Math.round(0.85*screen.width);
-    int h = screen.height - 50;
-    color[] colorz = new color[4];
+    int h = Math.round(0.7*screen.height);
+    color[] colorz = new color[5];
     colorz[0] = color(136, 225, 37); //#88E125;
     colorz[1] = color(252, 71, 140); //#fc478c;
     colorz[2] = color(255, 252, 23); //#fffc17;
     colorz[3] = color(0, 168, 240); //#00a8f0;
+    colorz[3] = color(0, 0, 0); //#000000;
+
     int cindex;
     int fibdex;
     int[] fibs = {1, 2, 3, 5, 8};

@@ -27,51 +27,6 @@
             background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
             background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
             }
-        .col-1
-            {
-            width:47.5%;
-            margin:0 2.5% 0 0;
-            float:left;
-            }
-        .col-2
-            {
-            width:47.5%;
-            margin:0 0 0 2.5%;
-            float:left;
-            }
-        .col-1 p,
-        .col-2 p
-            {
-            color:#888;
-            font-size:80%;
-            text-align:center;
-            }
-        a
-            {
-            color:#111;
-            }
-        h1 a
-            {
-            text-decoration:none;
-            }
-        h1 a:hover
-            {
-            color:#a82222;
-            }
-        p
-            {
-            margin:0 0 1.5em 0;
-            line-height:1.5em;
-            }
-        dt
-            {
-            font-family:monospace;
-            }
-        pre
-            {
-            line-height:1.2;
-            }
-
         /* Set font-sizes for the headings to be given the slabText treatment */
         h1
             {
@@ -80,7 +35,7 @@
             text-transform: uppercase;
             line-height:1;
             color:#75e100;
-            font-size:300%;
+            font-size:500%;
             /* Remember to set the correct font weight if using fontface */
             font-weight:normal;
             }
@@ -151,7 +106,9 @@
 </head>
 <body>
   <div id="containr">
-    <div id="lyric">
+    <div id="shockbox">
+    <div id="lyric1"></div>
+    <div id="lyric2"></div>
     </div>
   <hr />
   </div>
@@ -159,10 +116,18 @@
     // Function to slabtext the H1 headings
     function slabTextHeadlines() {
         var lyric = getLyric();
-        $("#lyric").html(lyric);
+        console.log(lyric[0]);
+        $("#lyric1").html('<h1>' + lyric[0] +'</h1>');
         var clr = getColor();
         $("h1").css('color', clr);
-        $( "#lyric" ).hide().fadeIn(3000).delay(15000).effect("drop",{direction:"down"},"slow");
+        var delay = 3000;
+        $( "#lyric1" ).hide().fadeIn(delay).delay(5*delay).effect("drop",{direction:"down"},"slow");
+        if (lyric.length > 1) {
+        var clr = getColor();
+        $("h1").css('color', clr);
+        $("#lyric2").html('<h1>' + lyric[1] +'</h1>');
+        $( "#lyric2" ).hide().fadeIn(4*delay).delay(2*delay).effect("drop",{direction:"down"},"slow");            
+        }
 
     };
     

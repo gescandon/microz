@@ -14,21 +14,20 @@ var songs = ['Don\'t You Want Me - Human League',
 	'and more...'];
 
 
-var words = ['You were working as a waitress in a cocktail bar',
-'She drove a Plymouth Satellite faster than the speed of light',
-'Good heavens Miss Sakamoto - you\'re beautiful!',
-'Go forward Move ahead Try to detect it It\'s not to late',
-'When I see you, eyes will turn blue',
-'I thought about you while the radio played',
-'Open fire on my burning heart I\'ve never been lucky in love',
-'There is water at the bottom of the ocean',
-'Hit me with those laser beams',
-'Don\'t touch me I\'m a real live wire',
-'Will you visit me please If I open my door',
-'Once I ran to you, now I run from you',
-'And if you say run, I\'ll run with you',
-'Your empty eyes Seem to pass me by',
-'You shouldn\'t let your manners slip'];
+var words = [['You were working as a waitress in a cocktail bar'],
+['She drove a Plymouth Satellite', 'faster than the speed of light'],
+['Good heavens Miss Sakamoto','you\'re beautiful!'],
+['Go forward', 'Move ahead'],
+['When I see you', 'eyes will turn blue'],
+['I thought about you while the radio played'],
+['Open fire on my burning heart', 'I\'ve never been lucky in love'],
+['There is water', 'at the bottom of the ocean'],
+['Hit me with those laser beams'],
+['Don\'t touch me', 'I\'m a real live wire'],
+['Once I ran to you', 'now I run from you'],
+['And if you say run', 'I\'ll run with you'],
+['Your empty eyes', 'Seem to pass me by'],
+['You shouldn\'t let your manners slip','You\'re to precious']];
 
 var colorz = ['#ed2373',"#e8ea00","#0085d7","#75e100"];
 
@@ -45,10 +44,10 @@ var songsli = '';
 var shocks = ['/shock','/bouncer','/fibber','/bobble','/singer'];
 var shockTime = 23000;
 var shockFadeIn = 3000;
-var shockOn = true;
+var shockOn = false;
 function setShock() {
 	if (shockOn) {
-	  $( "#containr" ).fadeOut( shockFadeIn, function(){
+	  $( "#shockbox" ).fadeOut( shockFadeIn, function(){
 		var ind = getElement(shocks);
 		window.location = shocks[ind];	  	
 	  } );
@@ -63,5 +62,7 @@ function getColor() {
 	return colorz[getElement(colorz)];
 }
 function getLyric() {
-	return '<h1>' + words[getElement(words)] + '</h1>';
+	var wrd = words[getElement(words)];
+	console.log (wrd[0]);
+	return wrd;
 }

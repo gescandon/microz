@@ -42,6 +42,9 @@ app.get('/p5', function (req, res) {
 app.get('/shock', function (req, res) {
   res.sendFile(__dirname + '/views/shock.html')
 })
+app.get('/shock9', function (req, res) {
+  res.sendFile(__dirname + '/views/shock9.html')
+})
 app.get('/simon', function (req, res) {
   res.sendFile(__dirname + '/views/simon.html')
 })
