@@ -1,4 +1,4 @@
-    float framerate0 = 0.9; // our "sketch" will have a framerate of 24 frames per second.
+    float framerate0 = 2; // our "sketch" will have a framerate of 24 frames per second.
     int w = Math.round(0.7*screen.width);
     int h = Math.round(0.7*screen.height);
     color[] colorz = new color[5];
@@ -63,9 +63,9 @@
      void draw() {
 
        float s = second();
-       float r = s%4;
+       float r = s%3;
        stroke(#000000);
-       println(r);
+       //println(r);
        setFibdex();
        if (initial || r < 1) {
         fharr = new int[fibdex];
