@@ -121,23 +121,17 @@
         var clr = getColor();
         $("h1").css('color', clr);
         var delay = 3000;
-        $( "#lyric1" ).hide().fadeIn(delay).delay(5*delay).effect("drop",{direction:"down"},"slow");
+        $( "#lyric1" ).hide().fadeIn(delay).delay(6*delay).effect("drop",{direction:"down"},"slow");
         if (lyric.length > 1) {
         var clr = getColor();
         $("h1").css('color', clr);
         $("#lyric2").html('<h1>' + lyric[1] +'</h1>');
-        $( "#lyric2" ).hide().fadeIn(4*delay).delay(2*delay).effect("drop",{direction:"down"},"slow");            
+        $( "#lyric2" ).hide().fadeIn(5*delay).delay(1*delay).effect("shake").effect("drop",{direction:"down"},"slow");            
         }
 
     };
     
-    // Called one second after the onload event for the demo (as I'm hacking the
-    // fontface load event a bit here)
-
-    // Please do not do this in a production environment - you should really use
-    // google WebFont loader events (or something similar) for better control
     $(window).load(function() {
-        // So, to recap... don't actually do this, it's nasty!
         slabTextHeadlines();
         window.setInterval(function () {setShock()}, shockTime);
 
