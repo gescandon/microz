@@ -41,16 +41,16 @@ var songsli = '';
         songsli += smarkup + songs[i] + '</span></h1>';
       }
 
-var shocks = ['/shock','/bouncer','/fibber','/bobble','/singer','/shock2'];
+var shocks = ['/shock','/bouncer','/fibber','/bobble','/singer','/shock2','/flyer','flyerface'];
 var shockTime = 23000;
-var shockFadeIn = 3000;
+var shockFadeIn = 6000;
 var shockOn = true;
 function setShock() {
 	if (shockOn) {
 	  $( "#shockbox" ).fadeOut( shockFadeIn, function(){
 		var ind = getElement(shocks);
 		window.location = shocks[ind];	  	
-	  } );
+	  } ).delay(9000);
 	}
 }
 
