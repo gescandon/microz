@@ -1,12 +1,53 @@
 <html>
 <head>
 <title="The Microz"/>
-<script src="/public/js/processing.min.js"></script>
+<script src="/public/js/processing.js"></script>
+<script src="/public/js/jquery.min.js"></script>
+
 </head>
 <body style="background-color:black;">
 <div style="color:white;">
 	<h1>wat processing</h1>
 	</div>
-<canvas data-processing-sources="/public/js/fibberbox.pde"></canvas>
+	<div id="shockbox">
+		<canvas id="canvas1" data-processing-sources="/public/js/flock.pde"></canvas>
+	</div>
 </body>
+<script>
+var pdeArr = ['/public/js/life.pde','/public/js/flock.pde'];
+var pdeIndex = 0;
+var fadeInTime = 15000;
+var p1;
+/*
+function setShock() {
+	if (shockOn) {
+	  $( "#shockbox" ).fadeOut( fadeInTime, function(){
+		var ind = getElement(shocks);
+		
+	  } ).delay(9000);
+	}
+}
+*/
+/*
+$(function() {
+    sayHi();
+
+    function sayHi() {
+    	var newPde = [];
+       	pdeIndex = (pdeIndex === 1) ? 0 : 1;
+    	newPde[0] = pdeArr[pdeIndex];
+
+		var canvas = document.getElementById("canvas1");
+		// attaching the sketchProc function to the canvas
+        alert(Processing.instances.length);
+		if (Processing.instances.length > 0) Processing.instances[0].exit();
+		p1 = Processing.loadSketchFromSources('canvas1', newPde);
+		// p.exit(); to detach it
+
+       setTimeout(sayHi, fadeInTime);
+       alert(p1);
+    }
+});
+*/
+</script>
 </html>

@@ -27,6 +27,9 @@ app.get('/faces', function (req, res) {
 app.get('/fibber', function (req, res) {
   res.sendFile(__dirname + '/views/microz.html')
 })
+app.get('/flock', function (req, res) {
+  res.sendFile(__dirname + '/views/flock.html')
+})
 app.get('/flyer', function (req, res) {
   res.sendFile(__dirname + '/views/flyer.html')
 })

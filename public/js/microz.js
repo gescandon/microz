@@ -41,8 +41,8 @@ var songsli = '';
         songsli += smarkup + songs[i] + '</span></h1>';
       }
 
-var shocks = ['/shock','/bouncer','/fibber','/bobble','/singer','/shock2','/flyer','flyerface'];
-var shockTime = 23000;
+var shocks = ['/flock','/shock','/bouncer','/fibber','/bobble','/singer','/shock2','/flyer','flyerface'];
+var shockTime = 150000;
 var shockFadeIn = 6000;
 var shockOn = true;
 function setShock() {
