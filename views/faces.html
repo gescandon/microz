@@ -29,7 +29,7 @@
       </div>
       <div class="col-md-12">
         <div id="nextgig"><h2><span class="label label-success">
-        <span id="next-gig-title">Join Us! Next Gig:</span>
+        <span id="next-gig-title">Genre: SynthPop - 70s 80s New Wave Dance</span>
         <span id="next-gig-place"></span>
         <span id="next-gig-time"></span>
         </span></h2>
@@ -37,22 +37,25 @@
 
       <div class="col-md-6"><center>
         <a href="/bios"><img class="face" src="public/img/mark.png" name="Mark"></a>
+        <p><a href="/bios"><h2>Bios</h2></a>
         </center></div>
       <div class="col-md-6"><center>
-        <a href="/bios"><img class="face" src="public/img/brad.png"></a>
+        <a href="/music"><img class="face" src="public/img/brad.png"></a>
+        <p><a href="/music"><h2>Demo</h2></a>
         </center></div>
       <div class="col-md-6"><center>
-        <a href="/bios"><img class="face" src="public/img/kc.png"></a>
+        <a href="/flyers"><img class="face" src="public/img/kc.png"></a>
+        <p><a href="/flyers"><h2>Flyers</h2></a>
         </center></div>
       <div class="col-md-6"><center>
         <a href="/bios"><img class="face" src="public/img/geof.png"></a>
         </center></div>
 
-      <div class="col-md-12 songlist">
+      <div class="col-md-12 footer">
         <button type="button" onclick="gotoPage('booking');"class="btn btn-lg btn-default">Hire The Microz</button>
         <button type="button" onclick="gotoPage('hits');" class="btn btn-lg btn-default">Dance like it's 1984</button>
         <button type="button" onclick="gotoPage('https://docs.google.com/forms/d/1oobsDLfwmjevHXAxw1G2mniIWctoubaWtzpijakQUF8/viewform');" class="btn btn-lg btn-default">Contact Us!</button>
-        </div>
+      </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -62,8 +65,8 @@
     <script>
 
       $( document ).ready(function() {
-        $('#next-gig-place').html(nextGig.place);
-        $('#next-gig-time').html(nextGig.datetime);
+        //$('#next-gig-place').html(nextGig.place);
+        //$('#next-gig-time').html(nextGig.datetime);
         });
     </script>
   </body>
