@@ -44,7 +44,7 @@ var songsli = '';
 var shocks = ['/flock','/shock','/bouncer','/fibber','/bobble','/singer','/shock2','/flyer','flyerface'];
 var shockTime = 150000;
 var shockFadeIn = 6000;
-var shockOn = true;
+var shockOn = false;
 function setShock() {
 	if (shockOn) {
 	  $( "#shockbox" ).fadeOut( shockFadeIn, function(){

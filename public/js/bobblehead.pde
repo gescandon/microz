@@ -41,7 +41,7 @@
 
 
     void draw() {
-      background(#000000);
+      background(#ffffff);
 
       if(second()%2 == 0){
 
@@ -53,13 +53,14 @@
 
       cosine = cos(angle);
 
-      
+      bradw = w/4;
+      bradh = h/4
 
-      translate(width/4, height/2);
+      //translate(-bradw/2, -bradh/2);
       //rect(0,0,10,10);
       rotate(cosine);
-      translate(-brad.width/8, -brad.height/8);
-      image(brad, 0, 0, w/2, h/2);
+      translate(w/2, h/2);
+      image(brad, 0, 0, bradw, bradh);
     }
  
    interface FibberBox {

@@ -12,13 +12,15 @@
 </head>
 <body>
 <div id="containr">
-	<div id="shockbox">
-    <canvas data-processing-sources="/public/js/bobblehead.pde"></canvas>
+	<div id="cloud">
+    <canvas data-processing-sources="/public/js/cloud.pde"></canvas>
     </div>
 </div>
 </body>
 <script type="text/javascript">
+  
   $( "#containr" ).hide().fadeIn( shockFadeIn );
-  window.setInterval(function () {setShock()}, shockTime);
+  //window.setInterval(function () {setShock()}, shockTime);
+  
 </script>
 </html>

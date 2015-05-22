@@ -15,11 +15,17 @@ app.get('/', function (req, res) {
 app.get('/bobble', function (req, res) {
   res.sendFile(__dirname + '/views/bobble.html')
 })
+app.get('/bios', function (req, res) {
+  res.sendFile(__dirname + '/views/bios.html')
+})
 app.get('/booking', function (req, res) {
   res.sendFile(__dirname + '/views/booking.html')
 })
 app.get('/bouncer', function (req, res) {
   res.sendFile(__dirname + '/views/bouncer.html')
+})
+app.get('/cloud', function (req, res) {
+  res.sendFile(__dirname + '/views/cloud.html')
 })
 app.get('/faces', function (req, res) {
   res.sendFile(__dirname + '/views/faces.html')
