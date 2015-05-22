@@ -45,6 +45,9 @@ app.get('/flyerface', function (req, res) {
 app.get('/hits', function (req, res) {
   res.sendFile(__dirname + '/views/hits.html')
 })
+app.get('/music', function (req, res) {
+  res.sendFile(__dirname + '/views/music.html')
+})
 app.get('/nextgig', function (req, res) {
   res.sendFile(__dirname + '/views/nextgig.html')
 })
